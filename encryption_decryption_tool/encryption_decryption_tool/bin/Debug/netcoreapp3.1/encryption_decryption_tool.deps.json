@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "encryption_decryption_tool/1.0.0": {
+        "runtime": {
+          "encryption_decryption_tool.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "encryption_decryption_tool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
