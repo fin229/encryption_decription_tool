@@ -7,20 +7,20 @@ namespace encryption_decryption_tool
         static void Main(string[] args) 
         {
             //request message
-
+             
             //declare message variable
             string message = "";
             int key;
 
-            Console.WriteLine("type a messageto encrypt"+Environment.NewLine);
-            message = Console.ReadLine();
-            Console.WriteLine("Enter your key"+Environment.NewLine);
-            key=int.Parse(Console.ReadLine());
-            Console.WriteLine("Encrypted data:");
-            string cipherText=CEncipher(message, key);
-            Console.WriteLine(cipherText+Environment.NewLine);
-            Console.WriteLine("Decrypted data:");
-            Console.WriteLine(CDecipher(cipherText,key)+Environment.NewLine);
+            //Console.WriteLine("type a messageto encrypt"+Environment.NewLine);
+            //message = Console.ReadLine();
+            //Console.WriteLine("Enter your key"+Environment.NewLine);
+            //key=int.Parse(Console.ReadLine());
+            //Console.WriteLine("Encrypted data:");
+            //string cipherText=CEncipher(message, key);
+            //Console.WriteLine(cipherText+Environment.NewLine);
+            //Console.WriteLine("Decrypted data:");
+            //Console.WriteLine(CDecipher(cipherText,key)+Environment.NewLine);
 
             //validate message
             //do
@@ -29,8 +29,26 @@ namespace encryption_decryption_tool
             //    Console.ReadLine();
             //} while (string.IsNullOrWhiteSpace(message));
 
+            Console.WriteLine("Geef de tekst dat u wenst te encrypteren of te decrypteren in: ");
+            message = Console.ReadLine();
 
-
+            Console.WriteLine("Wilt u de tekst encrypteren of decrypteren?"+Environment.NewLine+"om te stoppen druk op null");
+            string keuze=Console.ReadLine();
+            while (keuze != "0")
+            {
+                if (keuze == "encrypteren")
+                {
+                    Console.WriteLine("Geef de sleutel");
+                    key = int.Parse(Console.ReadLine());
+                    CEncipher(message, key);
+                }
+                if (keuze == "decrypteren")
+                {
+                    Console.WriteLine("Geef de sleutel");
+                    key = int.Parse(Console.ReadLine());
+                    CDecipher(message, key);
+                }
+            }
             //functions for encryption
             static char CCipher(char ch, int key)
             {
