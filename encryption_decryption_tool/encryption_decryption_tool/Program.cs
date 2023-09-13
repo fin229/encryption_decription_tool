@@ -34,7 +34,7 @@ namespace encryption_decryption_tool
 
             Console.WriteLine("Wilt u de tekst encrypteren of decrypteren?"+Environment.NewLine+"om te stoppen druk op null");
             keuze=Console.ReadLine();
-            while (keuze != "0")
+            while (keuze != "0"||string.IsNullOrWhiteSpace(keuze))
             {
                 if (keuze == "encrypteren")
                 {
