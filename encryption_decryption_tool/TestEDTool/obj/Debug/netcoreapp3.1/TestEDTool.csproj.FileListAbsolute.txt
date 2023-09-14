@@ -1,0 +1,6 @@
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\obj\Debug\netcoreapp3.1\TestEDTool.csproj.AssemblyReference.cache
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\obj\Debug\netcoreapp3.1\TestEDTool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\obj\Debug\netcoreapp3.1\TestEDTool.AssemblyInfoInputs.cache
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\obj\Debug\netcoreapp3.1\TestEDTool.AssemblyInfo.cs
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\TestEDTool\obj\Debug\netcoreapp3.1\TestEDTool.csproj.CoreCompileInputs.cache

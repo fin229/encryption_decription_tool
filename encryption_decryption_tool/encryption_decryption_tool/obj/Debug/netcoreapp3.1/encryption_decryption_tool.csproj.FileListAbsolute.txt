@@ -12,3 +12,5 @@ C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryptio
 C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\encryption_decryption_tool\obj\Debug\netcoreapp3.1\encryption_decryption_tool.dll
 C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\encryption_decryption_tool\obj\Debug\netcoreapp3.1\encryption_decryption_tool.pdb
 C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\encryption_decryption_tool\obj\Debug\netcoreapp3.1\encryption_decryption_tool.genruntimeconfig.cache
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\encryption_decryption_tool\bin\Debug\netcoreapp3.1\nunit.framework.dll
+C:\Users\Fineas\OneDrive\Desktop\encryption_decription_tool\encryption_decryption_tool\encryption_decryption_tool\obj\Debug\netcoreapp3.1\encryption_decryption_tool.csproj.CopyComplete
