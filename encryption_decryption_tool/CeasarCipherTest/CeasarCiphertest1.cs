@@ -1,5 +1,6 @@
 using encryption_decryption_tool;
 using NUnit.Framework;
+using System;
 
 namespace CeasarCipherTest
 {
@@ -34,6 +35,17 @@ namespace CeasarCipherTest
             // Assert
             string expected = "Hello, World!";
             Assert.That(decryptedText, Is.EqualTo(expected));
+        }
+        [Test]
+        public void TestInvalidKey()
+        {
+            // Arrange
+            string message = "Hello, World!";
+            int key = -5; // An invalid key (e.g., outside the valid range)
+
+            // Act & Assert
+            Assert.Throws<FormatException>(() => Program.CEncipher(message, key));
+            Assert.Throws<FormatException>(() => Program.CDecipher(message, key));
         }
     }
 }

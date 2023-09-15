@@ -2,50 +2,85 @@
 
 namespace encryption_decryption_tool
 {
-   public class Program
+    public class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
             //request message
-             
+
             //declare message variable
-            string message,keuze;
+            string message, keuze;
             int key;
+            bool stop = false;
 
-            Console.WriteLine("Geef de tekst dat u wenst te encrypteren of te decrypteren in: ");
-            message = Console.ReadLine();
-
-            Console.WriteLine("Wilt u de tekst encrypteren of decrypteren?"+Environment.NewLine+"om te stoppen druk op null");
-            keuze=Console.ReadLine();
-            while (keuze != "0"||string.IsNullOrWhiteSpace(keuze))
+            while (stop != true)
             {
-                if (keuze == "encrypteren")
-                {
-                   
-                    do
-                    {
-                        Console.WriteLine("Geef de sleutel");
-                    } while (!int.TryParse(Console.ReadLine(),out key));
-                   Console.WriteLine(CEncipher(message, key));
-                }
-                if (keuze == "decrypteren")
-                {
-                   
-                    do
-                    {
-                        Console.WriteLine("Geef de sleutel");
-                    } while (!int.TryParse(Console.ReadLine(), out key));
-                    Console.WriteLine(CDecipher(message, key));
-                }
+                Console.WriteLine("Hallo, welkom bij de encryptie en decryptie tool." + Environment.NewLine
+               + "om de tool te stoppen druk op q" + Environment.NewLine);
                 Console.WriteLine("Geef de tekst dat u wenst te encrypteren of te decrypteren in: ");
                 message = Console.ReadLine();
+                if (message != "q")
+                {
+                    Console.WriteLine("Wilt u de tekst encrypteren of decrypteren?" + Environment.NewLine);
+                    keuze = Console.ReadLine();
+                    if (keuze == "encrypteren" || keuze == "decrypteren")
+                    {
+                        try
+                        {
+                            key = ReadInteger("Geef de sleutel (een geheel getal tussen 1 en 25):", 1, 25);
 
-                Console.WriteLine("Wilt u de tekst encrypteren of decrypteren?" + Environment.NewLine + "om te stoppen druk op null");
-                keuze = Console.ReadLine();
+                            if (keuze == "encrypteren")
+                            {
+                                string encryptedMessage = CEncipher(message, key);
+                                Console.WriteLine("Versleutelde tekst: " + encryptedMessage);
+                            }
+                            else if (keuze == "decrypteren")
+                            {
+                                string decryptedMessage = CDecipher(message, key);
+                                Console.WriteLine("Ontsleutelde tekst: " + decryptedMessage);
+                            }
+                        }
+                        catch (FormatException)
+                        {
+
+                            Console.WriteLine("Ongeldige invoer. Voer een geldig geheel getal in.");
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Ongeldige invoer.Voer een geldig geheel getal tussen 1 en 25");
+                        }
+                    }
+                    else if (keuze != "0")
+                    {
+                        Console.WriteLine("Ongeldige keuze. Kies 'encrypteren', 'decrypteren', of '0' om te stoppen.");
+                    }
+                    
+                }
+                else
+                {
+                    stop = true;
+                }
+
             }
-        
+
         }
+
         //functions for encryption
+        public static int ReadInteger(string prompt, int minValue, int maxValue)
+        {
+            Console.WriteLine(prompt);
+            string input = Console.ReadLine();
+            int result;
+
+            if (int.TryParse(input, out result) && result >= minValue && result <= maxValue)
+            {
+                return result;
+            }
+            else
+            {
+                throw new FormatException();
+            }
+        }
         public static char CCipher(char ch, int key)
         {
             if (!char.IsLetter(ch))
@@ -74,5 +109,5 @@ namespace encryption_decryption_tool
             return CEncipher(input, 26 - key);
         }
     }
-   
+
 }
